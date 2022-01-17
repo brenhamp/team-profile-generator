@@ -9,7 +9,7 @@ const generatePage = team => {
             <div class="card-body">
                 <ul class="list">
                     <li class="list-item">ID: ${manager.getID()}</li>
-                    <li class="list-item">Email: <a href = "mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+                    <li class="list-item">Email: ${manager.getEmail()}</li>
                     <li class="list-item">Office number: ${manager.getOfficeNumber()}</li>
                 </ul>
             </div>
@@ -27,8 +27,8 @@ const generatePage = team => {
             <div class="card-body">
                 <ul class="list">
                     <li class="list-item">ID: ${engineer.getID()}</li>
-                    <li class="list-item">Email: <a href = "mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                    <li class="list-item">Github: <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></li>
+                    <li class="list-item">Email: ${engineer.getEmail()}</li>
+                    <li class="list-item">Github: <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="noopener noreferrer>${engineer.getGithub()}</a></li>
                 </ul>
             </div>
         </div>
@@ -45,7 +45,7 @@ const generatePage = team => {
             <div class="card-body">
                 <ul class="list">
                     <li class="list-item">ID: ${employee.getID()}</li>
-                    <li class="list-item">Email: <a href = "mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+                    <li class="list-item">Email: ${employee.getEmail()}</li>
                 </ul>
             </div>
         </div>
@@ -62,7 +62,7 @@ const generatePage = team => {
             <div class="card-body">
                 <ul class="list">
                     <li class="list-item">ID: ${intern.getID()}</li>
-                    <li class="list-item">Email: <a href = "mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+                    <li class="list-item">Email: ${intern.getEmail()}</li>
                     <li class="list-item">School: ${intern.getSchool()}</li>
                 </ul>
             </div>
@@ -73,21 +73,21 @@ const generatePage = team => {
     const htmlPage = [];
     
     htmlPage.push(team
-        .filter(employee => employee.getRole() === "Manager")
+        .filter(employee => employee.getRole() == "Manager")
         .map(manager => generateManager(manager)));
 
     htmlPage.push(team
-        .filter(employee => employee.getRole() === "Engineer")
+        .filter(employee => employee.getRole == "Engineer")
         .map(engineer => generateEngineer(engineer))
         .join(""));
 
     htmlPage.push(team
-        .filter(employee => employee.getRole() === "Employee")
+        .filter(employee => employee.getRole == "Employee")
         .map(employee => generateEmployee(employee))
         .join(""));
 
     htmlPage.push(team
-        .filter(employee => employee.getRole() === "Intern")
+        .filter(employee => employee.getRole == "Intern")
         .map(intern => generateIntern(intern))
         .join(""));
 
@@ -111,11 +111,11 @@ module.exports = team => {
     <div class="container-fluid">
         <div class="row">
             <div class="hero col-12 mb-3">
-                <h1 class="text-center text-white">My Team</h1>
+                <h1 class="text-center">My Team</h1>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid>
         <div class="row">
             <div class="row col-12 d-flex-justify-content-center">
             ${generatePage(team)}

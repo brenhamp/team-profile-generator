@@ -157,7 +157,7 @@ function init () {
             }
         ])
         .then(answers => {
-            const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool);
+            const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internGithub);
             employeeArray.push(intern);
             generateTeam();
         });
