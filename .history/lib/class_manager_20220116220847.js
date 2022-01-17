@@ -8,7 +8,7 @@ class Manager {
 
 getName() {return this.name;}
 getEmail() {return this.email;}
-getRole() {return "Manager"}
+getRole() {return "Employee"}
 getOfficeNumber() {return this.officeNumber;}
 };
 module.exports = Manager;

@@ -1,8 +1,8 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require("path");
-const fileDirectory = path.resolve(__dirname, "public");
-const outputPath = path.join(fileDirectory, "output.html");
+const fileDirectory = path.resolve(__dirname, "dist");
+const outputPath = path.join(DIST_DIR, "output.html");
 const generatePage = require("./src/template.js");
 
 const Employee = require("./lib/class_employee");

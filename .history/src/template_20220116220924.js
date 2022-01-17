@@ -92,7 +92,7 @@ const generatePage = team => {
         .join(""));
 
     return htmlPage.join("");
-};
+}
 
 module.exports = team => {
     return `
