@@ -125,8 +125,8 @@ function init () {
             },
         ])
         .then(answers => {
-            const employee = new Employee(answers.employeeName, answers.employeeID, answers.employeeEmail, answers.employeeGithub);
-            employees.push(employee);
+            const employee = new employee(answers.employeeName, answers.employeeID, answers.employeeEmail, answers.employeeGithub);
+            employees.push(engineer);
             generateTeam();
         });
     };
@@ -159,7 +159,7 @@ function init () {
         ])
         .then(answers => {
             const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internGithub);
-            employees.push(intern);
+            employees.push(engineer);
             generateTeam();
         });
     }

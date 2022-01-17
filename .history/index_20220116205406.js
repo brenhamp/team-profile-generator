@@ -102,66 +102,6 @@ function init () {
             employees.push(engineer);
             generateTeam();
         });
-    };
-
-    function addEmployee () {
-        inquirer.prompt ([
-            {
-                type: "input",
-                name: "employeeName",
-                message: "What is your employee's name?",
-            },
-
-            {
-                type: "input",
-                name: "employeeID",
-                message: "What is your employee's ID number?",
-            },
-
-            {
-                type:"input",
-                name:"employeeEmail",
-                message: "What is your employee's email address?",
-            },
-        ])
-        .then(answers => {
-            const employee = new Employee(answers.employeeName, answers.employeeID, answers.employeeEmail, answers.employeeGithub);
-            employees.push(employee);
-            generateTeam();
-        });
-    };
-
-    function addIntern () {
-        inquirer.prompt ([
-            {
-                type: "input",
-                name: "internName",
-                message: "What is your intern's name?",
-            },
-
-            {
-                type: "input",
-                name: "internID",
-                message: "What is your intern's ID number?",
-            },
-
-            {
-                type:"input",
-                name:"internEmail",
-                message: "What is your intern's email address?",
-            },
-
-            {
-                type: "input",
-                name: "internSchool",
-                message: "What school is your intern from?",
-            }
-        ])
-        .then(answers => {
-            const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internGithub);
-            employees.push(intern);
-            generateTeam();
-        });
     }
 
 
