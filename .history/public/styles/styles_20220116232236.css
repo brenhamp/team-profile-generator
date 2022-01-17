@@ -7,9 +7,9 @@
 .employee-card {
     margin: 1rem;
     border: none;
-    box-shadow:3px 3px 3px rgb(59, 59, 59);
-    float: none;
-    justify-content: center;
+    box-shadow:5px black;
+    display: block;
+    justify-content: space-around;
 }
 .card-body {
     background-color: rgb(224, 234, 250);
