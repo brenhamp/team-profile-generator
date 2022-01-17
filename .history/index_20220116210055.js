@@ -14,7 +14,7 @@ let role = document.getElementById("roles").value;
 console.log(role);
 
 //array to hold all employees
-employeeArray = [];
+employees = [];
 
 function init () {
 
@@ -68,7 +68,7 @@ function init () {
         ])
         .then(answers => {
             const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.officeNumber);
-            employeeArray.push(manager);
+            employees.push(manager);
             generateTeam();
         });
     };
@@ -101,7 +101,7 @@ function init () {
         ])
         .then(answers => {
             const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub);
-            employeeArray.push(engineer);
+            employees.push(engineer);
             generateTeam();
         });
     };
@@ -128,7 +128,7 @@ function init () {
         ])
         .then(answers => {
             const employee = new Employee(answers.employeeName, answers.employeeID, answers.employeeEmail, answers.employeeGithub);
-            employeeArray.push(employee);
+            employees.push(employee);
             generateTeam();
         });
     };
@@ -161,7 +161,7 @@ function init () {
         ])
         .then(answers => {
             const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internGithub);
-            employeeArray.push(intern);
+            employees.push(intern);
             generateTeam();
         });
     };
