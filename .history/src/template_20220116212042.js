@@ -34,39 +34,4 @@ const generatePage = team => {
         </div>
         `;
     };
-
-    const generateEmployee = employee => {
-        return `
-        <div class="employee-card">
-            <div class="card-header">
-                <h2 class="employee-name">${employee.getName()}</h2>
-                <h3 class="employee-title">${employee.getRole()}</h3>
-            </div>
-            <div class="card-body">
-                <ul class="list">
-                    <li class="list-item">ID: ${employee.getID()}</li>
-                    <li class="list-item">Email: ${employee.getEmail()}</li>
-                </ul>
-            </div>
-        </div>
-        `;
-    };
-
-    const generateIntern = intern => {
-        return `
-        <div class="employee-card">
-            <div class="card-header">
-                <h2 class="employee-name">${intern.getName()}</h2>
-                <h3 class="employee-title">${intern.getRole()}</h3>
-            </div>
-            <div class="card-body">
-                <ul class="list">
-                    <li class="list-item">ID: ${intern.getID()}</li>
-                    <li class="list-item">Email: ${intern.getEmail()}</li>
-                    <li class="list-item">School: ${intern.getSchool()}</li>
-                </ul>
-            </div>
-        </div>
-        `;
-    };
 }

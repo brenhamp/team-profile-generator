@@ -51,22 +51,4 @@ const generatePage = team => {
         </div>
         `;
     };
-
-    const generateIntern = intern => {
-        return `
-        <div class="employee-card">
-            <div class="card-header">
-                <h2 class="employee-name">${intern.getName()}</h2>
-                <h3 class="employee-title">${intern.getRole()}</h3>
-            </div>
-            <div class="card-body">
-                <ul class="list">
-                    <li class="list-item">ID: ${intern.getID()}</li>
-                    <li class="list-item">Email: ${intern.getEmail()}</li>
-                    <li class="list-item">School: ${intern.getSchool()}</li>
-                </ul>
-            </div>
-        </div>
-        `;
-    };
 }
