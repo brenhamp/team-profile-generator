@@ -19,6 +19,6 @@ test("Employee has an ID number.", () => {
 
 test("Employee has an email.", () => {
     const email = "bpozzi@trinity.edu";
-    const employeeObj = new Employee("Brenham", 12345, email);
+    const employeeObj = new Employee("Brenham", 1234, email);
 
 })
